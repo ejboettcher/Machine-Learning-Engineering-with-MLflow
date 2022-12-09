@@ -1,8 +1,8 @@
 name: stockpred
 
 docker_env:
-  image:  stockpred
-
+  image:  mlflow_image
+  volumes: ["/home/evelynboettcher/repos/Machine-Learning-Engineering-with-MLflow/Chapter01/stockpred:/stockpred"]
 entry_points:
   main:
-    command: "python train.py"
+    command: "python /stockpred/train.py"
